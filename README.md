@@ -1,10 +1,10 @@
-# <Project Name> by Twatter  
+# REST Cafe by coffeebuds (formerly Twatter)  
 
 ## Roster  
-* Fang Min Chen (PM)
-* Abid Talukder (<Add Role>)
-* Faiza Huda (<Add Role>)
-* Ziying Jian (<Add Role>)
+* Fang Min Chen (PM, Bridge)
+* Abid Talukder (Frontend)
+* Faiza Huda (Backend)
+* Ziying Jian (Backend)
 
 ## Description
 
