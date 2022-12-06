@@ -1,4 +1,4 @@
-# REST Cafe by coffeebuds (formerly Twatter)  
+# REST Cafe by coffeebuds 
 
 ## Roster  
 * Fang Min Chen (PM)
