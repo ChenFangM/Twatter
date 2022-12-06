@@ -5,6 +5,9 @@ Faiza Huda
 Ziying Jian
 pd 2
 ---------------------
+REST Cafe
+A cute and comforting study website with a radio, to-do lists, 
+Pomodoro timers, coffee, Dad jokes, and more!
 
  ______   ______   __   __   __       ______   _______     
 /_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
@@ -20,4 +23,16 @@ fangC -- 2022-12-02 15:59
 --------------------------------------------------------------
 Added init files
 PM Logistics/Shenanigans
+==============================================================
+
+coffeebuds -- 2022-12-06 14:27
+--------------------------------------------------------------
+fdbk summary: We should add a description to the design doc 
+and be more specific with what features of Bootstrap we're 
+using. Our component outline and component map is good!
+
+DD revisions: Adding specificity
+- Specified bootstrap features to be used
+- Updated site map
+- Added a short description of what the project is
 ==============================================================
