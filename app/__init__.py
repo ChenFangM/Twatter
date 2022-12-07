@@ -20,7 +20,8 @@ def index():
     gif_info = gif_info.json()
     
     for i in gif_info["data"]:
-        backgrounds.append(i["images"]["original"]["mp4"])
+        print(i["images"]["original"]["mp4"])
+        backgrounds.append(i["images"]["original"]["url"][:-5])
         
     
     return render_template("index.html", gif=random.choice(backgrounds))
