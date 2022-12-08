@@ -36,3 +36,14 @@ DD revisions: Adding specificity
 - Updated site map
 - Added a short description of what the project is
 ==============================================================
+
+abidT -- 2022-12-07 09:00
+--------------------------------------------------------------
+Created basic index page with gif background and nav bar
+Began pomodoro
+==============================================================
+
+fangC -- 2022-12-08 00:46
+--------------------------------------------------------------
+Added requirements.txt
+==============================================================
