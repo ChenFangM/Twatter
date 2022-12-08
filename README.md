@@ -1,5 +1,8 @@
 # REST Cafe by coffeebuds 
 
+## Description
+A cute and comforting study website with a radio, to-do lists, Pomodoro timers, coffee, Dad jokes, and more!
+
 ## Roster  
 * Fang Min Chen (PM)
   * Flask: Routing/linkages and switching tabs without reloading
@@ -13,10 +16,6 @@
   * Constructing a functioning login and registration page
   * Finding and incorporating Cat API and Trivia API
   * Incorporating YouTube API
-
-
-## Description
-A cute and comforting study website with a radio, to-do lists, Pomodoro timers, coffee, Dad jokes, and more!
 
 ## APIs Used
 * [CatAPI](https://github.com/stuy-softdev/notes-and-code/blob/main/api_kb/411_on_CatAPI.md)
