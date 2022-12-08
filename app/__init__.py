@@ -24,7 +24,7 @@ def index():
         backgrounds.append(i["images"]["original"]["url"][:-5])
         
     
-    return render_template("index.html", gif=random.choice(backgrounds))
+    return render_template("index.html", gif=random.choice(backgrounds), audio="../static/assets/Field-of-Fireflies.mp3")
     
 
 if __name__ == "__main__": #false if this file imported as module
