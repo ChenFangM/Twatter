@@ -25,6 +25,7 @@ REST Cafe is a cute and comforting study website with a radio, to-do lists, Pomo
 * Youtube API (to be added to kb)
 
 ## Launch Code
-```
-$ python3 app/__init__.py
-```
+Clone this repo!  
+Ensure ``requirements.txt`` packages are installed.  
+Run ``$ python3 app/__init__.py`` in your terminal.  
+Enjoy REST Cafe via your local host address.
