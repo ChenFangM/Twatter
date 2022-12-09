@@ -2,7 +2,17 @@
 
     <body>
 
-        Hello, this is the sign-up page.
+        <form action="/register" method = "POST">
+            <p>Username:</p>
+            <input type="text" name="username">
+            <p>Password:</p>
+            <input type="text" name="password">
+            <p></p>
+            <input type="submit" name="sub1">
+        <p> {{result}}</p>
+        </form>
+
+        <form action = "/login" method = "GET"> <input type = "submit" value = "Log In"></form>
         
     </body>
 

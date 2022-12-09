@@ -25,21 +25,23 @@ def index():
 
     if 'username' in session:
         return render_template("index.html", gif=random.choice(backgrounds))
-    return render_template("login.html") # add vars 
+
+    return render_template('login.html') # add vars 
 
 
-app.route("/login", methods = ['GET','POST'])
+@app.route("/login", methods = ['GET','POST'])
 def login():
 
     # GET request: display the form
     if request.method == "GET":
-        return render_template("login.html")
+        return render_template('login.html')
 
     usr = request.form['username']
     psw = request.form['password']
 
     if username == usr and password == psw:
-        return redirect("index")
+        session["username"] = usr
+        return redirect("/")
 
     # The Log-In Worked!
     # if User.authenticate_user(usr, psw):
@@ -71,7 +73,7 @@ def register():
 
 # Session clearing/Logout
 # Honestly this is for me so I know that the guest page works
-@app.route("/log-out", methods = ['GET', 'POST'])
+@app.route("/logout", methods = ['GET', 'POST'])
 def logout():
     if 'username' in session:
         session.pop('username', None)
