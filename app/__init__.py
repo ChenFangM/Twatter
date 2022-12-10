@@ -25,14 +25,18 @@ def index():
         backgrounds.append(i["images"]["original"]["url"][:-5])
         
     if 'username' in session:
-        return render_template("index.html", gif=random.choice(backgrounds), audio="../static/assets/Field-of-Fireflies.mp3")
+        return render_template("index.html", gif=random.choice(backgrounds), audio="../static/assets/Field-of-Fireflies.mp3", islogged="True")
+    return render_template("index.html", gif=random.choice(backgrounds), audio="../static/assets/Field-of-Fireflies.mp3")
 
-    return render_template('login.html') # add vars 
+@app.route("/loginRdrct")
+def profileOrLogin():
+    if 'username' in session:
+        return redirect("/profile")
+    return redirect("/login")
 
 
 @app.route("/login", methods = ['GET','POST'])
 def login():
-
     # GET request: display the form
     if request.method == "GET":
         return render_template('login.html')
@@ -54,7 +58,7 @@ def login():
 
 
 #create a new account:
-@app.route("/signup", methods = ['GET', 'POST'])
+@app.route("/signup", methods = ['GET', 'POST'])    # HARD CODED LOGIN INFORMATION
 def register():
     if "username" in session:
         return redirect(url_for('index'))
@@ -81,7 +85,9 @@ def logout():
         return redirect(url_for('index'))
     return "error.html"
 
-
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
