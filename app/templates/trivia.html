@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trivia Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      .question {
+        background-color: #EEE;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      .answer {
+        background-color: #DDD;
+        padding: 20px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+
+      .answer.selected {
+        background-color: #00F;
+        color: #FFF;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">Trivia Quiz</h1>
+
+      <div class="question">
+        <h2>What is the capital of France?</h2>
+      </div>
+
+      <div class="answer" data-value="1">
+        <h3>Paris</h3>
+      </div>
+
+      <div class="answer" data-value="2">
+        <h3>Berlin</h3>
+      </div>
+
+      <div class="answer" data-value="3">
+        <h3>Rome</h3>
+      </div>
+    </div>
+    
