@@ -66,7 +66,7 @@ Successfully made session cookies work
 Made placeholder HTML files
 ==============================================================
 
-ziggyJ and faizaH -- 2022-12-11 21:26
+ziggyJ and faizaH -- 2022-12-11 22:26
 --------------------------------------------------------------
 Incorporated GIPHY API and frontend code with login functionality
 Add a db for accounts
