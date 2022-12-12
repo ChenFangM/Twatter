@@ -53,17 +53,23 @@ abidT -- 2022-12-08 09:19
 Finding audio api's
 ==============================================================
 
-fangC -- 2022-12-08 9:19
+fangC -- 2022-12-08 09:19
 --------------------------------------------------------------
 Add audio controls to index.html (using audio file)
 Testing spotify api
 ==============================================================
 
-ziggyJ and faizaH -- 2022-12-09 9:28
+ziggyJ and faizaH -- 2022-12-09 09:28
 --------------------------------------------------------------
 Added a functional login page with logout functionality
 Successfully made session cookies work
 Made placeholder HTML files
+==============================================================
+
+fangC -- 2022-12-10 14:00
+--------------------------------------------------------------
+Frontend for login pages
+Fixed the audio to the bottom on index page
 ==============================================================
 
 ziggyJ and faizaH -- 2022-12-11 22:26
@@ -71,4 +77,9 @@ ziggyJ and faizaH -- 2022-12-11 22:26
 Incorporated GIPHY API and frontend code with login functionality
 Add a db for accounts
 Debugged GIPHY API and incorporated users, current, and cheats Python files into __init__.py
+==============================================================
+
+fangC -- 2022-12-10 09:00
+--------------------------------------------------------------
+Fix redirects for login, signup, and profile
 ==============================================================

@@ -29,24 +29,21 @@ def index():
     for i in gif_info["data"]:
         print(i["images"]["original"]["mp4"])
         backgrounds.append(i["images"]["original"]["url"][:-5])
+    # if 'username' in session:
+    #     return render_template("index.html", gif=random.choice(backgrounds), audio="../static/assets/Field-of-Fireflies.mp3", islogged=True)
+    return render_template("index.html", gif=random.choice(backgrounds), audio="../static/assets/Field-of-Fireflies.mp3")
+
+
+@app.route("/loginRdrct")
+def profileOrLogin():
     if 'username' in session:
-        return render_template("index.html", gif=random.choice(backgrounds), audio="../static/assets/Field-of-Fireflies.mp3", islogged="True")
-    return render_template("login.html")
-
-
-# @app.route("/loginRdrct")
-# def profileOrLogin():
-#     if 'username' in session:
-#         return redirect("/profile")
-#     return redirect("/login")
+        return redirect("/profile")
+    return redirect("/login")
 
 
 #create a new account:
 @app.route("/signup", methods = ['GET', 'POST'])    # HARD CODED LOGIN INFORMATION
 def register():
-    if "username" in session:
-        return redirect(url_for('index'))
-
     # GET request: display the form
     if request.method == "GET":
         return render_template("signup.html")
@@ -61,6 +58,9 @@ def register():
 
 @app.route("/login", methods = ['GET','POST'])
 def login():
+    if "username" in session:
+        return redirect(url_for('index'))
+
     # GET request: display the form
     if request.method == "GET":
         return render_template('login.html')
@@ -72,13 +72,13 @@ def login():
     if User.authenticate_user(usr, psw):
         session["username"] = usr
         session["user_id"] = User.get_ID(usr)
-        return render_template('index.html', username = usr, currUsrSess = currentUser(session["user_id"]))
+        # return render_template('index.html', username = usr, currUsrSess = currentUser(session["user_id"]))
+        return redirect(url_for('index'))
 
     return render_template('login.html', result = "username or password is incorrect")
 
 
 # Session clearing/Logout
-# Honestly this is for me so I know that the guest page works
 @app.route("/logout", methods = ['GET', 'POST'])
 def logout():
     if 'username' in session:
