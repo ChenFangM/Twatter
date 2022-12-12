@@ -26,9 +26,16 @@ def index():
     global backgrounds
     gif_info = requests.get("https://api.giphy.com/v1/gifs/search?api_key=1Ko27SdmSbweUZpNNz6FljJfxQdAoV9X&q=lofi&limit=25&offset=0&rating=g&lang=en")
     gif_info = gif_info.json()
+
+    #print(gif_info["data"])
     for i in gif_info["data"]:
-        print(i["images"]["original"]["mp4"])
-        backgrounds.append(i["images"]["original"]["url"][:-5])
+        try:
+            #print(i["images"]["hd"]["mp4"])
+            backgrounds.append(i["images"]["original"]["url"][:-5])
+            #print(i["images"]["hd"])
+        except:
+            None
+        #backgrounds.append(i["images"]["original"]["url"])
     # if 'username' in session:
     #     return render_template("index.html", gif=random.choice(backgrounds), audio="../static/assets/Field-of-Fireflies.mp3", islogged=True)
     return render_template("index.html", gif=random.choice(backgrounds), audio="../static/assets/Field-of-Fireflies.mp3")
