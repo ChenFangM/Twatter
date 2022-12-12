@@ -20,3 +20,24 @@ def setup():
                 )
                 """
             )
+
+    execute(
+                """
+                CREATE TABLE IF NOT EXISTS tasks (
+                    id           INTEGER PRIMARY KEY,
+                    task         TEXT,
+                    userid       INTEGER
+                )
+                """
+    )
+
+    execute(
+                """
+                INSERT INTO users (username, password)
+                SELECT 'hello', 'bye'
+                WHERE NOT EXISTS
+                    (SELECT username, password
+                    FROM users
+                    WHERE username = 'hello' AND password = 'bye')
+                """
+    )
