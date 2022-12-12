@@ -6,16 +6,16 @@ Ziying Jian
 pd 2
 ---------------------
 REST Cafe
-A cute and comforting study website with a radio, to-do lists, 
+A cute and comforting study website with a radio, to-do lists,
 Pomodoro timers, coffee, Dad jokes, and more!
 
- ______   ______   __   __   __       ______   _______     
-/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
-\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
- \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
-  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
-   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
-    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
+ ______   ______   __   __   __       ______   _______
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
@@ -27,8 +27,8 @@ PM Logistics/Shenanigans
 
 coffeebuds -- 2022-12-06 14:27
 --------------------------------------------------------------
-fdbk summary: We should add a description to the design doc 
-and be more specific with what features of Bootstrap we're 
+fdbk summary: We should add a description to the design doc
+and be more specific with what features of Bootstrap we're
 using. Our component outline and component map is good!
 
 DD revisions: Adding specificity
@@ -57,4 +57,18 @@ fangC -- 2022-12-08 9:19
 --------------------------------------------------------------
 Add audio controls to index.html (using audio file)
 Testing spotify api
+==============================================================
+
+ziggyJ and faizaH -- 2022-12-09 9:28
+--------------------------------------------------------------
+Added a functional login page with logout functionality
+Successfully made session cookies work
+Made placeholder HTML files
+==============================================================
+
+ziggyJ and faizaH -- 2022-12-11 21:26
+--------------------------------------------------------------
+Incorporated GIPHY API and frontend code with login functionality
+Add a db for accounts
+Debugged GIPHY API and incorporated users, current, and cheats Python files into __init__.py
 ==============================================================
