@@ -23,16 +23,16 @@ def index():
     for i in gif_info["data"]:
         print(i["images"]["original"]["mp4"])
         backgrounds.append(i["images"]["original"]["url"][:-5])
-        
+
     if 'username' in session:
         return render_template("index.html", gif=random.choice(backgrounds), audio="../static/assets/Field-of-Fireflies.mp3", islogged="True")
-    return render_template("index.html", gif=random.choice(backgrounds), audio="../static/assets/Field-of-Fireflies.mp3")
+    return render_template("login.html")
 
-@app.route("/loginRdrct")
-def profileOrLogin():
-    if 'username' in session:
-        return redirect("/profile")
-    return redirect("/login")
+# @app.route("/loginRdrct")
+# def profileOrLogin():
+#     if 'username' in session:
+#         return redirect("/profile")
+#     return redirect("/login")
 
 
 @app.route("/login", methods = ['GET','POST'])
@@ -70,7 +70,7 @@ def register():
     # POST request: handle the form response and redirect
     username = request.form['username']
     password = request.form['password']
-    
+
     # User.new_user(username, password)
 
     return redirect(url_for('login'))
@@ -91,5 +91,5 @@ def profile():
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
-    app.debug = True 
+    app.debug = True
     app.run()
