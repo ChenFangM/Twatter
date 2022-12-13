@@ -72,6 +72,20 @@
   <!-- To-Do List -->
 
   <div class="mt-3 mx-2 row justify-content-end">
+    <div id="container" class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%; height: auto; width: 300px; margin-bottom: 10px;">
+      <h1>To-Do List <i class="fa fa-plus"></i></h1>
+      <input type="text" placeholder="Add New Todo">
+    
+      <!--We can add the preexisting tasks here -->
+      <ul> 
+        <li><span><i class="fa fa-trash"></i></span> Go To Maths Class</li>
+        <li><span><i class="fa fa-trash"></i></span> Buy New Clothes</li>
+        <li><span><i class="fa fa-trash"></i></span> Visit George</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- <div class="mt-3 mx-2 row justify-content-end">
     <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%; height: 300px; width: 300px; overflow:scroll;">
       <div class="d-flex align-items-center justify-content-center fw-semibold">
         Reminders
@@ -106,29 +120,89 @@
           </button>
         </div>
       </div>
-    </div>
+    </div> -->
 
 
-    <script>
-    var myNodelist = document.getElementsByTagName("div");
-    var i;
-    for (i = 0; i < myNodelist.length; i++) {
-      var span = document.createElement("SPAN");
-      var txt = document.createTextNode("\u00D7");
-      span.className = "close";
-      span.appendChild(txt);
-      myNodelist[i].appendChild(span);
-    }
+    <style>
+      	
+      	body {
+	font-family: Roboto;
+  background: -webkit-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); }
 
-    // Add a "checked" symbol when clicking on a list item
-    var list = document.querySelector('button');
-    list.addEventListener('click', function(ev) {
-      if (ev.target.tagName === 'div') {
-        ev.target.classList.toggle('checked');
-      }
-    }, false);
-    </script>
-  </div>
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+h1 {
+	background: #2980b9;
+	color: white;
+	margin: 0;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+.fa-plus {
+	float: right;
+}
+
+li {
+	background: #fff;
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+}
+
+li:nth-child(2n){
+	background: #f7f7f7;
+}
+
+span {
+	background: #e74c3c;
+	height: 40px;
+	margin-right: 20px;
+	text-align: center;
+	color: white;
+	width: 0;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0;
+}
+
+li:hover span {
+	width: 40px;
+	opacity: 1.0;
+}
+
+input {
+	font-size: 18px;
+	color: #2980b9;
+	background-color: #f7f7f7;
+	width: 100%;
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box;
+	border: 3px solid rgba(0,0,0,0);
+}
+
+input:focus{
+	background: #fff;
+	border: 3px solid #2980b9;
+	outline: none;
+}
+
+.completed {
+	color: gray;
+	text-decoration: line-through;
+}
+
+    </style>
+
+
 
   <!-- Radio -->
   <nav class="navbar fixed-bottom">

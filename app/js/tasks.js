@@ -1,18 +1,30 @@
-// Create a "close" button and append it to each list item
-var myNodelist = index.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = index.createElement("SPAN");
-  var txt = index.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
+$(document).ready(function(){
+    
+  $("ul").on("click", "li", function(){
+   $(this).toggleClass("completed");
+ });
+ 
+ 
+ $("ul").on("click", "span", function(event){
+   $(this).parent().fadeOut(500,function(){
+     $(this).remove();
+   });
+   event.stopPropagation();
+ });
+ 
+ $("input[type='text']").keypress(function(event){
+   if(event.which === 13){
+     
+     var todoText = $(this).val();
+     $(this).val("");
+   
+     $("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>")
+   }
+ });
+ 
+ $(".fa-plus").click(function(){
+   $("input[type='text']").fadeToggle();
+ });   
+     
+     
+ });
