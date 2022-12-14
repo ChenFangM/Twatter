@@ -25,7 +25,24 @@ REST Cafe is a cute and comforting study website with a radio, to-do lists, Pomo
 * Youtube API (to be added to kb)
 
 ## Launch Code
-Clone this repo!  
-Ensure ``requirements.txt`` packages are installed.  
-Run ``$ python3 app/__init__.py`` in your terminal.  
-Enjoy REST Cafe via your local host address.
+Clone this repo.
+``` 
+$ git clone https://github.com/ChenFangM/coffeebuds.git
+```
+
+Find your way into the new directory.
+```
+$ cd coffeebuds/
+```
+
+Install required packages
+```
+$ pip install -r requirements.txt
+```
+
+Run Flask
+```
+$ python3 app/__init__.py  
+```
+
+Enjoy REST Cafe via your local host address ``http://127.0.0.1:5000/`` in your browser.

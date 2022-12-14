@@ -49,20 +49,62 @@
     </div>
   </nav>
 
+
   <!-- Pomodoro Timer -->
 
+  <!-- Javascript for timer -->
+  <script>
+    
+    var time = 1500;
+    let interval;
+
+    function timer() {
+      if(time > 0) {
+        time--;
+        document.getElementById('displayTime').innerHTML = formatTime(time);
+      } else {
+        clearInterval(interval);
+      }
+    }
+    function startTimer(){
+      interval = setInterval(timer, 1000);
+    }
+    function pauseTimer(){
+      interval = clearInterval(interval);
+    }
+    function resetTimer(){
+      interval = clearInterval(interval);
+      time = 1500;
+      document.getElementById('displayTime').innerHTML = formatTime(time);
+    }
+    function formatTime(num){
+      const min = Math.floor(num/60);
+      const sec = num%60;
+      if (sec<10) {
+        return min + ":0" + sec; 
+      } else {
+        return min + ":" + sec;
+      }
+    }
+
+  </script>
+
+  <!-- Display timer -->
   <div class="mt-3 mx-2 row justify-content-end">
     <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%; height: 200px; width: 300px;">
-      <div class="d-flex align-items-center justify-content-center display-1 fw-semibold">
-        25:00
+      <div class="d-flex align-items-center justify-content-center display-1 fw-semibold"> 
+        <div id=displayTime>25:00</div>
       </div>
 
       <div class="d-flex justify-content-center gap-2">
-        <button class="btn btn-dark btn-lg">
+        <button type="button" class="btn btn-dark btn-lg" onclick="startTimer();">
           Start
         </button>
-        <button class="btn btn-dark btn-lg">
-          Back
+        <button class="btn btn-dark btn-lg" onclick="pauseTimer();">
+          Pause
+        </button>
+        <button class="btn btn-dark btn-lg" onclick="resetTimer();">
+          Reset
         </button>
       </div>
 
@@ -72,6 +114,45 @@
   <!-- To-Do List -->
 
   <div class="mt-3 mx-2 row justify-content-end">
+    <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%; height: 300px; width: 300px; overflow:scroll;">
+      <div class="fs-5 d-flex align-items-center justify-content-center fw-semibold">
+        Reminders
+      </div>
+
+      <div class="d-flex flex-column px-2 justify-content-start">
+             
+            <button class="d-flex btn align-items-center">
+              <svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              </svg>
+              <div class="container">
+                Finish Math Homework by 7pm and Studydfsd dskjh skshd fdjk re i figured it out the problem hello what the hell is even going on he
+              </div>
+            </button>
+            
+            <button class="d-flex btn align-items-center">
+              <svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              </svg>
+              <div class="container">
+                List Tasks Here
+              </div>
+            </button>
+            
+            <button class="d-flex btn align-items-center">
+              <svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              </svg>
+              <div class="container">
+                List Work Here To Do
+              </div>
+            </button>
+          
+            
+      </div>
+    </div>
+
+  <!-- <div class="mt-3 mx-2 row justify-content-end">
     <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%; height: 300px; width: 300px; overflow:scroll;">
       <div class="d-flex align-items-center justify-content-center fw-semibold">
         Reminders
@@ -106,29 +187,88 @@
           </button>
         </div>
       </div>
-    </div>
+    </div> -->
 
 
-    <script>
-    var myNodelist = document.getElementsByTagName("div");
-    var i;
-    for (i = 0; i < myNodelist.length; i++) {
-      var span = document.createElement("SPAN");
-      var txt = document.createTextNode("\u00D7");
-      span.className = "close";
-      span.appendChild(txt);
-      myNodelist[i].appendChild(span);
-    }
+    <style>
+      	
+      	body {
+  background: -webkit-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); }
 
-    // Add a "checked" symbol when clicking on a list item
-    var list = document.querySelector('button');
-    list.addEventListener('click', function(ev) {
-      if (ev.target.tagName === 'div') {
-        ev.target.classList.toggle('checked');
-      }
-    }, false);
-    </script>
-  </div>
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+h1 {
+	background: #2980b9;
+	color: white;
+	margin: 0;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+.fa-plus {
+	float: right;
+}
+
+li {
+	background: #fff;
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+}
+
+li:nth-child(2n){
+	background: #f7f7f7;
+}
+
+span {
+	background: #e74c3c;
+	height: 40px;
+	margin-right: 20px;
+	text-align: center;
+	color: white;
+	width: 0;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0;
+}
+
+li:hover span {
+	width: 40px;
+	opacity: 1.0;
+}
+
+input {
+	font-size: 18px;
+	color: #2980b9;
+	background-color: #f7f7f7;
+	width: 100%;
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box;
+	border: 3px solid rgba(0,0,0,0);
+}
+
+input:focus{
+	background: #fff;
+	border: 3px solid #2980b9;
+	outline: none;
+}
+
+.completed {
+	color: gray;
+	text-decoration: line-through;
+}
+
+    </style>
+
+
 
   <!-- Radio -->
   <nav class="navbar fixed-bottom">
