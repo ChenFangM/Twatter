@@ -30,9 +30,9 @@ Clone this repo.
 $ git clone https://github.com/ChenFangM/coffeebuds.git
 ```
 
-Find your way into the new directory.
+Find your way into the app directory.
 ```
-$ cd coffeebuds/
+$ cd coffeebuds/app/
 ```
 
 Install required packages
@@ -42,7 +42,7 @@ $ pip install -r requirements.txt
 
 Run Flask
 ```
-$ python3 app/__init__.py  
+$ python3 __init__.py  
 ```
 
 Enjoy REST Cafe via your local host address ``http://127.0.0.1:5000/`` in your browser.
