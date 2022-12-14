@@ -30,14 +30,19 @@ Clone this repo.
 $ git clone https://github.com/ChenFangM/coffeebuds.git
 ```
 
-Find your way into the app directory.
+Find your way into the repo.
 ```
-$ cd coffeebuds/app/
+$ cd coffeebuds/
 ```
 
 Install required packages
 ```
 $ pip install -r requirements.txt
+```
+
+Find your way into the app directory.
+```
+$ cd app/
 ```
 
 Run Flask
