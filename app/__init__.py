@@ -103,6 +103,23 @@ def logout():
 def profile():
     return render_template("profile.html")
 
+@app.route("/destress")
+def destress():
+    return render_template("destress.html")
+
+@app.route("/catpics")
+def catpics():
+    return render_template("catpics.html")
+
+@app.route("/dadjokes")
+def dadjokes():
+    return render_template("dadjokes.html")
+
+@app.route("/trivia")
+def trivia():
+    return render_template("trivia.html")
+
+
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
