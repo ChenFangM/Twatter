@@ -86,7 +86,7 @@ Fix redirects for login, signup, and profile
 
 ziggyJ and faizaH -- 2022-12-13 09:19
 --------------------------------------------------------------
-Set up html and css for todo list 
+Set up html and css for todo list
 framework for js setup
 Put .gitignore in place
 ==============================================================
@@ -94,4 +94,11 @@ Put .gitignore in place
 fangC -- 2022-12-13 19:29
 --------------------------------------------------------------
 Implemented the pomodoro timer
+==============================================================
+
+ziggyJ -- 2022-12-14 20:30
+--------------------------------------------------------------
+Successfully embedded YouTube video into the background
+Consulted iFrame API documentation and specified embed parameters, such as autoplay
+Did some frontend setup
 ==============================================================
