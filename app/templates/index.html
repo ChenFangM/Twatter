@@ -14,6 +14,15 @@
 
 <body style="background-size: 100% 100%; height: 100%; width: 100%; background-image: url('{{gif}}'); height: 100vh;">
 
+<!-- YouTube Video Background -->
+<!-- <div style="pointer-events: none; user-select: none; position: fixed; top: 100%; left: 100%;" class="yt-wrapper"> -->
+  <div style="position: fixed; inset: 0px; display: flex; align-items: center; justify-content: center; z-index: 0; background: black;" class="yt-wrapper">
+    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+      <div style="pointer-events: none; user-select: none; z-index: -1; border-radius: 8px; width: 100vw; height: 200vw;">
+        <div style="width: 100%; height: 100%;"><iframe allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="【24/7 CHILL LOFI HIP HOP RADIO】beats to sleep/relax/study to" src="https://www.youtube.com/embed/qH3fETPsqXU?autoplay=0&amp;mute=0&amp;controls=0&amp;origin=https%3A%2F%2Fwww.lofi.cafe&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=true&amp;color=black&amp;enablejsapi=1&amp;widgetid=1" id="widget2" width="100%" height="100%" frameborder="0">
+  </iframe></div></div></div></div>
+
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
@@ -21,6 +30,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
         <ul class="navbar-nav gap-2">
           <li class="nav-item">
@@ -54,7 +64,7 @@
 
   <!-- Javascript for timer -->
   <script>
-    
+
     var time = 1500;
     let interval;
 
@@ -81,7 +91,7 @@
       const min = Math.floor(num/60);
       const sec = num%60;
       if (sec<10) {
-        return min + ":0" + sec; 
+        return min + ":0" + sec;
       } else {
         return min + ":" + sec;
       }
@@ -92,7 +102,7 @@
   <!-- Display timer -->
   <div class="mt-3 mx-2 row justify-content-end">
     <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%; height: 200px; width: 300px;">
-      <div class="d-flex align-items-center justify-content-center display-1 fw-semibold"> 
+      <div class="d-flex align-items-center justify-content-center display-1 fw-semibold">
         <div id=displayTime>25:00</div>
       </div>
 
@@ -120,7 +130,7 @@
       </div>
 
       <div class="d-flex flex-column px-2 justify-content-start">
-             
+
             <button class="d-flex btn align-items-center">
               <svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -129,7 +139,7 @@
                 Finish Math Homework by 7pm and Studydfsd dskjh skshd fdjk re i figured it out the problem hello what the hell is even going on he
               </div>
             </button>
-            
+
             <button class="d-flex btn align-items-center">
               <svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -138,7 +148,7 @@
                 List Tasks Here
               </div>
             </button>
-            
+
             <button class="d-flex btn align-items-center">
               <svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -147,51 +157,13 @@
                 List Work Here To Do
               </div>
             </button>
-          
-            
+
+
       </div>
     </div>
 
-  <!-- <div class="mt-3 mx-2 row justify-content-end">
-    <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%; height: 300px; width: 300px; overflow:scroll;">
-      <div class="d-flex align-items-center justify-content-center fw-semibold">
-        Reminders
-      </div>
-
-      <div class="d-flex flex-column px-2 justify-content-start">
-        <div class="d-flex gap-2">
-          <button class="d-flex btn gap-2 align-items-center">
-            <svg style="width: 16px; height: 16px;"  xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-            </svg>
-            List Tasks Here
-          </button>
-
-        </div>
-
-        <div class="d-flex gap-2">
-          <button class="d-flex btn gap-2 align-items-center">
-            <svg style="width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-            </svg>
-            Finish Math Homework by 7pm and Studydfsd dskjh skshd fdjk
-          </button>
-        </div>
-
-        <div class="d-flex gap-2">
-          <button class="d-flex btn gap-2 align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-            </svg>
-            List Tasks Here
-          </button>
-        </div>
-      </div>
-    </div> -->
-
-
     <style>
-      	
+
       	body {
   background: -webkit-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); }
 
