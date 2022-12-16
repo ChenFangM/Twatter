@@ -2,7 +2,7 @@ from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
 from flask import session, redirect, url_for
-import requests
+import requests, json
 import sqlite3
 import os
 import datetime
@@ -109,7 +109,10 @@ def destress():
 
 @app.route("/catpics")
 def catpics():
-    return render_template("catpics.html")
+    cat = requests.get(f"https://api.thecatapi.com/v1/images/search")
+    cat = json.loads(cat.text)
+    print(cat[0]['url'])
+    return render_template("catpics.html", caturl = cat[0]['url'])
 
 @app.route("/dadjokes")
 def dadjokes():
