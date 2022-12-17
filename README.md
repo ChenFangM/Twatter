@@ -3,6 +3,7 @@
 ## Roster  
 * Fang Min Chen (PM)
   * Flask: Routing/linkages and switching tabs without reloading
+  * Incorporating apis for the destress page
   * Making sure frontend and backend work together
 * Abid Talukder
   * Using Bootstrap to build the site
@@ -11,7 +12,6 @@
   * Constructing a to-do list db and incorporating its functionality
 * Ziying Jian
   * Constructing a functioning login and registration page
-  * Finding and incorporating Cat API and Trivia API
   * Incorporating YouTube API
   
 ## Description

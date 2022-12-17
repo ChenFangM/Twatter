@@ -109,14 +109,18 @@ def destress():
 
 @app.route("/catpics")
 def catpics():
-    cat = requests.get(f"https://api.thecatapi.com/v1/images/search")
-    cat = json.loads(cat.text)
-    print(cat[0]['url'])
-    return render_template("catpics.html", caturl = cat[0]['url'])
+    cat_info = requests.get(f"https://api.thecatapi.com/v1/images/search")
+    cat_info = json.loads(cat_info.text)
+    return render_template("catpics.html", caturl = cat_info[0]['url'])
 
 @app.route("/dadjokes")
 def dadjokes():
-    return render_template("dadjokes.html")
+    with open('keys/key_dadjokes.txt', 'r+') as f:
+        key = f.read()
+
+    joke_info = requests.get(f"https://dad-jokes.p.rapidapi.com/random/joke?rapidapi-key={key}")
+    joke_info = json.loads(joke_info.text)
+    return render_template("dadjokes.html", jokeSetup=joke_info["body"][0]["setup"], punchline=joke_info["body"][0]["punchline"])
 
 @app.route("/trivia")
 def trivia():

@@ -102,3 +102,28 @@ Successfully embedded YouTube video into the background
 Consulted iFrame API documentation and specified embed parameters, such as autoplay
 Did some frontend setup
 ==============================================================
+
+fangC -- 2022-12-15 09:20
+--------------------------------------------------------------
+Updated pomodoro timer to have a button to switch between
+time for work/rest
+Updated button links for destress page
+==============================================================
+
+fangC -- 2022-12-15 09:20
+--------------------------------------------------------------
+Updated pomodoro timer to have a button to switch between
+time for work/rest
+Added button links for destress page
+==============================================================
+
+fangC -- 2022-12-16 19:20
+--------------------------------------------------------------
+Added more linkages for destress page
+Implemented cat api to generate cat pictures for destress
+==============================================================
+
+fangC -- 2022-12-7 18:15
+--------------------------------------------------------------
+Implemented dadjokes api to generate dadjokes for destress
+==============================================================
