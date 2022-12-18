@@ -110,11 +110,10 @@ time for work/rest
 Updated button links for destress page
 ==============================================================
 
-fangC -- 2022-12-15 09:20
+faizaH -- 2022-12-15 09:28
 --------------------------------------------------------------
-Updated pomodoro timer to have a button to switch between
-time for work/rest
-Added button links for destress page
+Successfully Implemented JS and can now append things to list
+Changed todo list css and html
 ==============================================================
 
 fangC -- 2022-12-16 19:20
