@@ -126,3 +126,9 @@ fangC -- 2022-12-7 18:15
 --------------------------------------------------------------
 Implemented dadjokes api to generate dadjokes for destress
 ==============================================================
+
+faizaH -- 2022-12-18 13:00
+--------------------------------------------------------------
+Finished JS for adding, completing, and deleting tasks on todo list
+Started beforeunload events/bridging the gap btwn front and backend via saving
+==============================================================
