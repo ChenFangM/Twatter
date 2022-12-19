@@ -102,3 +102,33 @@ Successfully embedded YouTube video into the background
 Consulted iFrame API documentation and specified embed parameters, such as autoplay
 Did some frontend setup
 ==============================================================
+
+fangC -- 2022-12-15 09:20
+--------------------------------------------------------------
+Updated pomodoro timer to have a button to switch between
+time for work/rest
+Updated button links for destress page
+==============================================================
+
+faizaH -- 2022-12-15 09:28
+--------------------------------------------------------------
+Successfully Implemented JS and can now append things to list
+Changed todo list css and html
+==============================================================
+
+fangC -- 2022-12-16 19:20
+--------------------------------------------------------------
+Added more linkages for destress page
+Implemented cat api to generate cat pictures for destress
+==============================================================
+
+fangC -- 2022-12-7 18:15
+--------------------------------------------------------------
+Implemented dadjokes api to generate dadjokes for destress
+==============================================================
+
+faizaH -- 2022-12-18 13:00
+--------------------------------------------------------------
+Finished JS for adding, completing, and deleting tasks on todo list
+Started beforeunload events/bridging the gap btwn front and backend via saving
+==============================================================
