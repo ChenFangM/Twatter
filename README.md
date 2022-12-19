@@ -20,9 +20,8 @@ REST Cafe is a cute and comforting study website with a radio, to-do lists, Pomo
 ## APIs Used
 * [CatAPI](https://github.com/stuy-softdev/notes-and-code/blob/main/api_kb/411_on_CatAPI.md)
 * [DadJokes](https://github.com/stuy-softdev/notes-and-code/blob/main/api_kb/411_on_DadJokes.md)
-* Gif API (to be added to kb)
-* Trivia API (to be added to kb)
-* Youtube API (to be added to kb)
+* Gif API (to be added to kb) (https://giphy.com/)
+* Trivia API (to be added to kb) (https://opentdb.com/api_config.php)
 
 ## Launch Code
 Clone this repo.
