@@ -41,3 +41,9 @@ def setup():
                     WHERE username = 'hello' AND password = 'bye')
                 """
     )
+
+    # execute(
+    #            """
+    #            INSERT INTO
+    #            """
+    # )

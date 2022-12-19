@@ -14,23 +14,21 @@
     <title>Home</title>
 </head>
 
-<!-- <body style="background-size: 100% 100%; height: 100%; width: 100%; background-image: url('{{gif}}'); height: 100vh;"> -->
-
 <!-- YouTube Video Background -->
 
-<!-- <div style="pointer-events: none; user-select: none; position: fixed; top: 100%; left: 100%;" class="yt-wrapper">
-<div style="width: 100%; height: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: 8px;"> -->
-
-<div style="position: fixed; inset: 0px; display: flex; align-items: center; justify-content: center; z-index: 0; background: black;" class="yt-wrapper">
-    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
-        <div style="width: 100%; height: 100%;">
-          <iframe allowfullscreen="1" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="【24/7 CHILL LOFI HIP HOP RADIO】beats to sleep/relax/study to" src="https://www.youtube.com/embed/qH3fETPsqXU?autoplay=1&mute=0&controls=0&origin=http://127.0.0.1:5000&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=true&color=black&enablejsapi=0&widgetid=1" id="widget2" width="100%" height="100%" frameborder="0">></iframe>
+<div style="position: fixed; inset: 0px; display: flex; align-items: center; justify-content: center; z-index: -3; background: black;" class="yt-wrapper">
+    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px; z-index: -2;">
+        <div style="width: 100%; height: 100%; z-index: -1;">
+          <iframe allowfullscreen="1" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="【24/7 CHILL LOFI HIP HOP RADIO】beats to sleep/relax/study to" src="https://www.youtube.com/embed/qH3fETPsqXU?autoplay=1&mute=0&controls=0&origin=http://127.0.0.1:5000&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=true&color=black&enablejsapi=0&widgetid=1&amp;wmode=transparent" id="widget2" width="100%" height="100%" frameborder="0">></iframe>
         </div>
       </div>
 </div>
 
-<script>
+<!-- GIFs Background -->
+<div style="background-size: 100%; height: 100%; width: 100%; background-image: url('{{gif}}');"></div>
+<!-- <img style="position: absolute; width: 100vw; height: 100vh; top: 0px; left: 0px; object-fit: cover; z-index: 0; background"> -->
 
+<script>
 
 function switchStations(){}
 </script>
@@ -173,7 +171,6 @@ function switchStations(){}
         padding: 0;
         }
 
-
         h1 {
         background: #2980b9;
         color: white;
@@ -258,7 +255,7 @@ function switchStations(){}
 
             $(".fa-plus").click(function(){
 	            $("input[type='text']").fadeToggle();
-            });  
+            });
 
             $("ul").on("click", "span", function(event){
 	            $(this).parent().fadeOut(500,function(){
@@ -268,7 +265,7 @@ function switchStations(){}
             });
 
             window.addEventListener("beforeunload", function(event) {
-              console.log("WHY DONT YOU SHOW UP");
+              console.log("#list");
               //event.preventDefault();
               event.returnValue = null; //"Any text"; //true; //false;
               //return null; //"Any text"; //true; //false;

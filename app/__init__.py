@@ -26,7 +26,7 @@ def index():
     global backgrounds
 
     # GIPHY API KEY
-    with open('keys/key_giphy.txt', 'r+') as f:
+    with open('keys/key_giphy.txt', 'r') as f:
         key = f.read()
 
     gif_info = requests.get(f"https://api.giphy.com/v1/gifs/search?api_key={key}&q=lofi&limit=25&offset=0&rating=g&lang=en")
@@ -125,8 +125,6 @@ def dadjokes():
 @app.route("/trivia")
 def trivia():
     return render_template("trivia.html")
-
-
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
