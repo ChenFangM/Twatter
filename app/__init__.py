@@ -15,6 +15,7 @@ from current import currentUser
 app = Flask(__name__)
 app.secret_key = os.urandom(16)
 backgrounds = []
+trivToken = "YOURTOKENHERE"
 cheats.setup()
 
 username = "hello"
@@ -124,7 +125,15 @@ def dadjokes():
 
 @app.route("/trivia")
 def trivia():
-    return render_template("trivia.html")
+    global trivToken
+    category = 0
+    triv_info = requests.get(f"https://opentdb.com/api.php?amount=1&token={trivToken}&category={category}&type=multiple")
+    triv_info = json.loads(triv_info.text)
+    if (triv_info["response_code"] != 0):
+        trivToken = json.loads((requests.get("https://opentdb.com/api_token.php?command=request")).text)["token"] 
+        return trivia()
+    else:
+        return render_template("trivia.html", question=triv_info["results"][0]["question"])
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified

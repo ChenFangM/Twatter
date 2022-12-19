@@ -81,25 +81,35 @@
             </div>
 
             <div class="question border rounded-3">
-              <h2 class="display-5">What is the capital of France?</h2>
+              <h2 class="display-5" id="q">Question</h2>
             </div>
 
             <div class="d-flex flex-column gap-2 py-2">
               <div class="answer rounded-3" data-value="1">
-                  <h3>Paris</h3>
+                  <h3>A1</h3>
                 </div>
 
                 <div class="answer rounded-3" data-value="2">
-                  <h3>Berlin</h3>
+                  <h3>A2</h3>
                 </div>
 
                 <div class="answer rounded-3" data-value="3">
-                  <h3>Rome</h3>
+                  <h3>A3</h3>
                 </div>
 
                 <div class="answer rounded-3" data-value="3">
-                  <h3>Rome</h3>
+                  <h3>A4</h3>
                 </div>
             </div>
+
+            <script>
+              function decodeHtml(s) {
+                var line = document.createElement("textarea");
+                line.innerHTML = s;
+                return line.value;
+              }
+              document.getElementById("q").innerHTML = decodeHtml("{{question}}")
+            </script>
+
           </div>
     </div>
