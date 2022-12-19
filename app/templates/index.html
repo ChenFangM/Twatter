@@ -80,6 +80,7 @@ function switchStations(){}
 <!-- Javascript for timer -->
 <script>
     var time = 1500;
+    var isOn = false;
     var restTime = false;
     let interval;
 
@@ -92,13 +93,19 @@ function switchStations(){}
       }
     }
     function startTimer(){
-      interval = setInterval(timer, 1000);
+      if (!isOn) {
+        interval = setInterval(timer, 1000);
+        isOn = true;
+      } 
     }
     function pauseTimer(){
-      interval = clearInterval(interval);
+      if (isOn) {
+        interval = clearInterval(interval);
+        isOn = false;
+      }
     }
     function resetTimer(){
-      interval = clearInterval(interval);
+      pauseTimer();
       if(restTime) {
         time = 300;
       } else {
