@@ -18,7 +18,7 @@ $(document).ready(function(){
      var todoText = $(this).val();
      $(this).val("");
    
-     $("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>")
+     $("#list").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>")
    }
  });
  
@@ -26,5 +26,10 @@ $(document).ready(function(){
    $("input[type='text']").fadeToggle();
  });   
      
-     
+ window.addEventListener("beforeunload", function(event) {
+  console.log(document.getElementById("#list"));
+  //is null rn must get elements in listos
+  
  });
+     
+});
