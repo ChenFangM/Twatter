@@ -26,7 +26,8 @@ def index():
     print("hello")
     if backgrounds == []:
         backgroundSetup()
-    return renderIndex(random.choice(backgrounds))
+    return render_template("index.html", gif =(random.choice(backgrounds)))
+    
 def backgroundSetup():
     global backgrounds
 
@@ -45,8 +46,6 @@ def backgroundSetup():
             #print(i["images"]["hd"])
         except:
             None
-def renderIndex(gif):
-    return render_template("index.html", gif = gif, audio="../static/assets/Field-of-Fireflies.mp3")
 
 @app.route("/loginRdrct")
 def profileOrLogin():
