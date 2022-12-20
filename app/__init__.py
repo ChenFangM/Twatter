@@ -24,6 +24,10 @@ password = "bye"
 @app.route("/",methods=['GET', 'POST']) # At the root, we just return the homepage
 def index():
     print("hello")
+    if backgrounds == []:
+        backgroundSetup()
+    return renderIndex(random.choice(backgrounds))
+def backgroundSetup():
     global backgrounds
 
     # GIPHY API KEY
@@ -41,11 +45,8 @@ def index():
             #print(i["images"]["hd"])
         except:
             None
-        #backgrounds.append(i["images"]["original"]["url"])
-    # if 'username' in session:
-    #     return render_template("index.html", gif=random.choice(backgrounds), audio="../static/assets/Field-of-Fireflies.mp3", islogged=True)
-    return render_template("index.html", gif=random.choice(backgrounds), audio="../static/assets/Field-of-Fireflies.mp3")
-
+def renderIndex(gif):
+    return render_template("index.html", gif = gif, audio="../static/assets/Field-of-Fireflies.mp3")
 
 @app.route("/loginRdrct")
 def profileOrLogin():
