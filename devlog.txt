@@ -135,11 +135,20 @@ Started beforeunload events/bridging the gap btwn front and backend via saving
 
 ziggyJ and faizaH -- 2022-12-18 21:00
 --------------------------------------------------------------
-figured out where console is for js beforeunload event
-explored possibilities of z-index -> video doesn't play anymore
+Explored the console for Javascript beforeunload event
+Explored possibilities of z-index -> video doesn't play anymore
 ===============================================================
 
 faizaH -- 2022-12-19 09:28
 --------------------------------------------------------------
-Linked enternal js file for index
+Linked external js files for index
+==============================================================
+
+ziggyJ -- 2022-12-20 10:49
+--------------------------------------------------------------
+Placed video in front of the GIF
+Lowered opacity of the video not be viewable
+Disabled fullscreen
+Formatted YouTube video so that it stretched out and hid the More Videos section
+Created a pause button
 ==============================================================
