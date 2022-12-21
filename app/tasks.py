@@ -18,11 +18,12 @@ class Task:
                 """
         )
 
-    def create_new(content, userid):
-        execute( 'INSERT INTO `tasks` (task, userid) VALUES (\"%s\", \"%s\")' % (content, userid) )
+    def create_new(content, user):
+        execute( 'INSERT INTO `tasks` (task, userid) VALUES (\"%s\", \"%s\")' % (content, user.id) )
 
-    def complete_old(content, userid):
-        execute( 'DELETE FROM `tasks` WHERE task = (\"%s\") AND userid = (\"%s"\)' % (content, userid))
+    def complete_old(content, user):
+        content = content[1:]
+        execute( 'DELETE FROM `tasks` WHERE task = (\"%s\") AND userid = (\"%s\")' % (content, user.id))
 
 
         

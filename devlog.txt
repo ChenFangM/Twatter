@@ -172,3 +172,11 @@ fangC -- 2022-12-20 17:15
 --------------------------------------------------------------
 Toggle visibility for timer and to-do list
 ==============================================================
+
+faizaH -- 2020-12-21 01:59
+--------------------------------------------------------------
+Added password protection (dot things) to signup
+Added placeholder logout button
+Added ajax adding and deleting of tasks frontend -> backend
+Changed PIZZA to actual tasks saved by usr
+==============================================================

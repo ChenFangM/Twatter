@@ -33,7 +33,7 @@ $(document).ready(function(){
  });
 
  window.addEventListener("beforeunload", function(event) {
-  event.returnValue = null;
+  //event.returnValue = null;
 
   console.log("New");
   if (newTasks.length > 0){

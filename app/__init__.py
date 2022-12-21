@@ -48,12 +48,6 @@ def backgroundSetup():
         except:
             None
 
-@app.route("/loginRdrct")
-def profileOrLogin():
-    if 'username' in session:
-        return redirect("/profile")
-    return redirect("/login")
-
 
 #create a new account:
 @app.route("/signup", methods = ['GET', 'POST'])    # HARD CODED LOGIN INFORMATION
@@ -73,7 +67,7 @@ def register():
 @app.route("/login", methods = ['GET','POST'])
 def login():
     if "username" in session:
-        return redirect(url_for('index'))
+        return redirect("/profile")
 
     # GET request: display the form
     if request.method == "GET":
@@ -172,10 +166,10 @@ def testing():
     if 'username' in session:
         if (request.method == "POST"):
             print("TIS DONE" + request.form['task'])
-            Task.complete_old(request.form['task'], session["user_id"])
+            Task.complete_old(request.form['task'], currentUser(session["user_id"]))
         else:
             print("TIS NEW" + request.args['task'])
-            Task.create_new(request.form['task'], session["user_id"])
+            Task.create_new(request.args['task'], currentUser(session["user_id"]))
     return "pigeon"
 
 if __name__ == "__main__": #false if this file imported as module

@@ -12,7 +12,7 @@ class currentUser:
         data = execute('SELECT * FROM `tasks` WHERE `tasks`.userid=%d' % self.id).fetchall()
 
         if len(data) == 0:
-            return ["fire", "power"]
+            return None
 
         tasks = list()
         for s in data:

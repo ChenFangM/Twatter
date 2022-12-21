@@ -56,8 +56,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-light btn-sm" style="opacity: 0.8;" href="/loginRdrct">
+            <a class="nav-link btn btn-light btn-sm" style="opacity: 0.8;" href="/login">
                 <img src="../static/assets/reshot-icon-leaderboard-2ZS8JETV4N.svg" width="25px" height="25px" alt="">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-light btn-sm" style="opacity: 0.8;" href="/logout">
+                <img src="../static/assets/reshot-icon-ice-2UJDX685BG.svg" width="25px" height="25px" alt="">
             </a>
           </li>
 
@@ -119,14 +124,14 @@
       <!--We can add the preexisting tasks here -->
       <ul id = "list">
         {% if loggedIn %}
-          {%  for story in curUsr.get_tasks() %}
-          <li><span><i class="fa fa-trash"></i></span> PIZZA</li>
-          {% endfor %}
+
+          {% if curUsr.get_tasks() is not none %}
+            {%  for task in curUsr.get_tasks() %}
+            <li><span><i class="fa fa-trash"></i></span> {{task[1]}}</li>
+            {% endfor %}
+          {% endif %}
 
         {% else %}
-          <li><span><i class="fa fa-trash"></i></span> Go To Physics Class</li>
-          <li><span><i class="fa fa-trash"></i></span> Buy New Clothes</li>
-          <li><span><i class="fa fa-trash"></i></span> Visit George</li>
         {% endif %}
       </ul>
     </div>
