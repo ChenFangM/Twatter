@@ -24,6 +24,11 @@ password = "bye"
 @app.route("/",methods=['GET', 'POST']) # At the root, we just return the homepage
 def index():
     print("hello")
+    if backgrounds == []:
+        backgroundSetup()
+    return render_template("index.html", gif =(random.choice(backgrounds)))
+    
+def backgroundSetup():
     global backgrounds
 
     # GIPHY API KEY
@@ -41,11 +46,6 @@ def index():
             #print(i["images"]["hd"])
         except:
             None
-        #backgrounds.append(i["images"]["original"]["url"])
-    # if 'username' in session:
-    #     return render_template("index.html", gif=random.choice(backgrounds), audio="../static/assets/Field-of-Fireflies.mp3", islogged=True)
-    return render_template("index.html", gif=random.choice(backgrounds), audio="../static/assets/Field-of-Fireflies.mp3")
-
 
 @app.route("/loginRdrct")
 def profileOrLogin():
@@ -116,6 +116,7 @@ def catpics():
     cat_info = json.loads(cat_info.text)
     return render_template("catpics.html", caturl = cat_info[0]['url'])
 
+
 @app.route("/dadjokes")
 def dadjokes():
     with open('keys/key_dadjokes.txt', 'r+') as f:
@@ -125,6 +126,7 @@ def dadjokes():
     joke_info = json.loads(joke_info.text)
     return render_template("dadjokes.html", jokeSetup=joke_info["body"][0]["setup"], punchline=joke_info["body"][0]["punchline"])
 
+
 @app.route("/trivia")
 def trivia():
     global trivToken
@@ -132,7 +134,7 @@ def trivia():
     triv_info = requests.get(f"https://opentdb.com/api.php?amount=1&token={trivToken}&category={category}&type=multiple")
     triv_info = json.loads(triv_info.text)
     if (triv_info["response_code"] != 0):
-        trivToken = json.loads((requests.get("https://opentdb.com/api_token.php?command=request")).text)["token"] 
+        trivToken = json.loads((requests.get("https://opentdb.com/api_token.php?command=request")).text)["token"]
         return trivia()
     else:
         return render_template("trivia.html", question=triv_info["results"][0]["question"])
