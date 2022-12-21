@@ -11,6 +11,7 @@ import random
 import cheats
 from user import User
 from current import currentUser
+from tasks import Task
 
 app = Flask(__name__)
 app.secret_key = os.urandom(16)
@@ -18,9 +19,6 @@ backgrounds = []
 trivToken = "YOURTOKENHERE"
 cheats.setup()
 triv_info = None
-
-username = "hello"
-password = "bye"
 
 @app.route("/",methods=['GET', 'POST']) # At the root, we just return the homepage
 def index():
@@ -171,10 +169,13 @@ def trivia():
 @app.route("/updating", methods = ['GET', 'POST'])
 def testing():
     print("OH MA GER")
-    if (request.method == "POST"):
-        print("TIS DONE" + request.form['task'])
-    else:
-        print("TIS NEW" + request.args['task'])
+    if 'username' in session:
+        if (request.method == "POST"):
+            print("TIS DONE" + request.form['task'])
+            Task.complete_old(request.form['task'], session["user_id"])
+        else:
+            print("TIS NEW" + request.args['task'])
+            Task.create_new(request.form['task'], session["user_id"])
     return "pigeon"
 
 if __name__ == "__main__": #false if this file imported as module
