@@ -144,6 +144,13 @@ faizaH -- 2022-12-19 09:28
 Linked external js files for index
 ==============================================================
 
+fangC -- 2022-12-19 18:00
+--------------------------------------------------------------
+Fixed pomodoro glitch
+Started trivia tab: retrieve questions from api 
+(+decode format) and display them on the page
+==============================================================
+
 ziggyJ -- 2022-12-20 10:49
 --------------------------------------------------------------
 Placed video in front of the GIF
@@ -159,4 +166,9 @@ Removed DB from github
 Added redirecting for logged in users
 Added block content to index html allowing for PIZZA to placehold for tasks saved by usr in db
 Fixed JS issue by commenting out internal scripting for switching stations
-======================
+==============================================================
+
+fangC -- 2022-12-20 17:15
+--------------------------------------------------------------
+Toggle visibility for timer and to-do list
+==============================================================

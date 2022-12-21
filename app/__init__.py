@@ -164,17 +164,9 @@ def trivia():
         c=allChoices.pop(random.randint(0,len(allChoices)-1))
         d=allChoices.pop(0)
         correct = current["correctAnswer"]
-        
-        
     
     return render_template("trivia.html", question=current["question"],choicea=a,choiceb=b,choicec=c,choiced=d,correctchoice=correct)
-        
-        
-        
-    
-    
-    
-    return render_template("trivia.html", question=triv_info["results"][0]["question"])
+
 
 @app.route("/updating", methods = ['GET', 'POST'])
 def testing():
