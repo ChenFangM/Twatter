@@ -17,6 +17,7 @@ app.secret_key = os.urandom(16)
 backgrounds = []
 trivToken = "YOURTOKENHERE"
 cheats.setup()
+triv_info = None
 
 username = "hello"
 password = "bye"
@@ -125,8 +126,48 @@ def dadjokes():
 
 @app.route("/trivia")
 def trivia():
-    triv_info = requests.get(f"https://the-trivia-api.com/api/questions")
-    triv_info = triv_info.json()
+    global triv_info
+    if triv_info == None or len(triv_info)==0:
+        triv_info = requests.get(f"https://the-trivia-api.com/api/questions")
+        triv_info = triv_info.json()
+        #print(triv_info)
+        
+        current = triv_info[0]
+        triv_info.pop(0)
+        
+        allChoices=[]
+        allChoices.append(current["correctAnswer"])
+        
+        for i in current["incorrectAnswers"]:
+            allChoices.append(i)
+        
+        a=allChoices.pop(random.randint(0,len(allChoices)-1))
+        b=allChoices.pop(random.randint(0,len(allChoices)-1))
+        c=allChoices.pop(random.randint(0,len(allChoices)-1))
+        d=allChoices.pop(0)
+        correct = current["correctAnswer"]
+    else:
+        current = triv_info[0]
+        triv_info.pop(0)
+        
+        allChoices=[]
+        allChoices.append(current["correctAnswer"])
+        
+        for i in current["incorrectAnswers"]:
+            allChoices.append(i)
+        
+        a=allChoices.pop(random.randint(0,len(allChoices)-1))
+        b=allChoices.pop(random.randint(0,len(allChoices)-1))
+        c=allChoices.pop(random.randint(0,len(allChoices)-1))
+        d=allChoices.pop(0)
+        correct = current["correctAnswer"]
+        
+        
+    
+    return render_template("trivia.html", question=current["question"],choicea=a,choiceb=b,choicec=c,choiced=d,correctchoice=correct)
+        
+        
+        
     
     
     
