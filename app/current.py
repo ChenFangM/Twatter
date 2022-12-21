@@ -9,13 +9,13 @@ class currentUser:
         self.password = clone.password
 
     def get_tasks(self):
-        data = execute('SELECT * FROM `stories` WHERE `stories`.usrID=%d' % self.id).fetchall()
+        data = execute('SELECT * FROM `tasks` WHERE `tasks`.userid=%d' % self.id).fetchall()
 
         if len(data) == 0:
-            return None
+            return ["fire", "power"]
 
         tasks = list()
         for s in data:
             print(s)
 
-        return true
+        return data

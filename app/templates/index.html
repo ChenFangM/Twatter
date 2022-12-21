@@ -13,6 +13,8 @@
     <title>Home</title>
 </head>
 
+{% block content %}
+
 <!-- YouTube Video Background -->
 <div style="position: fixed; inset: 0px; display: flex; align-items: center; justify-content: center; background: black; opacity:0.8;" class="yt-wrapper">
     <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px; opacity:0.8;">
@@ -116,9 +118,16 @@
 
       <!--We can add the preexisting tasks here -->
       <ul id = "list">
-        <li><span><i class="fa fa-trash"></i></span> Go To Maths Class</li>
-        <li><span><i class="fa fa-trash"></i></span> Buy New Clothes</li>
-        <li><span><i class="fa fa-trash"></i></span> Visit George</li>
+        {% if loggedIn %}
+          {%  for story in curUsr.get_tasks() %}
+          <li><span><i class="fa fa-trash"></i></span> PIZZA</li>
+          {% endfor %}
+
+        {% else %}
+          <li><span><i class="fa fa-trash"></i></span> Go To Physics Class</li>
+          <li><span><i class="fa fa-trash"></i></span> Buy New Clothes</li>
+          <li><span><i class="fa fa-trash"></i></span> Visit George</li>
+        {% endif %}
       </ul>
     </div>
     <style>
@@ -213,7 +222,7 @@
     </div>
   </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 
 <script type="text/javascript">
 
@@ -241,7 +250,7 @@ function switchStations() {
 //   });
 // });
 
-</script>
+</script> -->
 
 <!-- LINKAGES -->
 <script src="../static/js/tasks.js"></script>
@@ -249,5 +258,6 @@ function switchStations() {
 <script src="../static/js/timer.js"></script>
 
 </body>
+{% endblock content %}
 
 </html>

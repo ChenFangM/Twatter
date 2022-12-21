@@ -11,30 +11,18 @@ function timer() {
     clearInterval(interval);
   }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 3fe794d44eeb1552081bf88afc0c62c638df3196
 function startTimer(){
   if (!isOn) {
     interval = setInterval(timer, 1000);
     isOn = true;
   }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 3fe794d44eeb1552081bf88afc0c62c638df3196
 function pauseTimer(){
   if (isOn) {
     interval = clearInterval(interval);
     isOn = false;
   }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 3fe794d44eeb1552081bf88afc0c62c638df3196
 function resetTimer(){
   pauseTimer();
   if(restTime) {
@@ -44,18 +32,10 @@ function resetTimer(){
   }
   document.getElementById('displayTime').innerHTML = formatTime(time);
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 3fe794d44eeb1552081bf88afc0c62c638df3196
 function switchTimer(){
   restTime = !(restTime);
   resetTimer();
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 3fe794d44eeb1552081bf88afc0c62c638df3196
 function formatTime(num){
   const min = Math.floor(num/60);
   const sec = num%60;
@@ -64,8 +44,4 @@ function formatTime(num){
   } else {
     return min + ":" + sec;
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 3fe794d44eeb1552081bf88afc0c62c638df3196

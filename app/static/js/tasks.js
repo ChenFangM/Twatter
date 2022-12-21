@@ -27,7 +27,7 @@ $(document).ready(function(){
  });
 
  window.addEventListener("beforeunload", function(event) {
-  console.log(document.getElementById("#list"));
+  console.log("JSDFKJHDSFJHSDFHJKSDHJSDFH");
   //is null rn must get elements in listos
 
  });

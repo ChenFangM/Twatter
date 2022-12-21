@@ -26,7 +26,7 @@ def index():
     print("hello")
     if backgrounds == []:
         backgroundSetup()
-    return render_template("index.html", gif =(random.choice(backgrounds)))
+    return render_template("index.html", gif =(random.choice(backgrounds)), loggedIn = False)
     
 def backgroundSetup():
     global backgrounds
@@ -85,7 +85,7 @@ def login():
     if User.authenticate_user(usr, psw):
         session["username"] = usr
         session["user_id"] = User.get_ID(usr) 
-        return render_template('index.html', loggedIn = "true", curUsr = currentUser(session["user_id"]))
+        return render_template('index.html', loggedIn = True, curUsr = currentUser(session["user_id"]))
         #### THIS WILL RENDER INDEX WITH THEIR TODOLSIT
         # return render_template('index.html', username = usr, currUsrSess = currentUser(session["user_id"]))
         return redirect(url_for('index'))
