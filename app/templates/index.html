@@ -20,7 +20,7 @@
     <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px; opacity:0.8;">
         <div style="width: 100%; height: 145%;">
                 <iframe id="player" allow="autoplay;"
-                src="https://www.youtube.com/embed/qH3fETPsqXU?autoplay=1&mute=0&controls=0&playsinline=1&showinfo=0&rel=0&modestbranding=1&color=black&enable&amp;wmode=transparent"
+                src="https://www.youtube.com/embed/qH3fETPsqXU?autoplay=1&mute=0&controls=0&playsinline=1&showinfo=0&rel=0&modestbranding=1&color=black&enable&amp;wmode=transparent?enablejsapi=1"
                 width="100%" height="100%" frameborder="0" donotallowfullscreen>></iframe>
         </div>
   </div>
@@ -209,7 +209,15 @@
   <div class="mt-3 mx-2 row justify-content-end">
     <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%;">
       <div class="d-flex align-items-center justify-content-center display-1 fw-semibold">
-        <button type="button" onclick="pause()">Pause</button>
+        <button type="button" onclick="pause()" id="pause-button">Pause</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-3 mx-2 row justify-content-end">
+    <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%;">
+      <div class="d-flex align-items-center justify-content-center display-1 fw-semibold">
+        <button type="button" onclick="play()" id="play-button">Play</button>
       </div>
     </div>
   </div>
@@ -223,7 +231,6 @@
   </div>
 
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-
 <script type="text/javascript">
 
 function pause(){
@@ -254,7 +261,7 @@ function switchStations() {
 
 <!-- LINKAGES -->
 <script src="../static/js/tasks.js"></script>
-<!-- <script src="../static/js/player.js"></script> -->
+<script src="../static/js/player.js"></script>
 <script src="../static/js/timer.js"></script>
 
 </body>
