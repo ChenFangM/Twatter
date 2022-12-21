@@ -15,17 +15,6 @@
 
 {% block content %}
 
-<!-- YouTube Video Background -->
-<div style="position: fixed; inset: 0px; display: flex; align-items: center; justify-content: center; background: black; opacity:0.8;" class="yt-wrapper">
-    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px; opacity:0.8;">
-        <div style="width: 100%; height: 145%;">
-                <iframe id="player" allow="autoplay;"
-                src="https://www.youtube.com/embed/qH3fETPsqXU?autoplay=1&mute=0&controls=0&playsinline=1&showinfo=0&rel=0&modestbranding=1&color=black&enable&amp;wmode=transparent?enablejsapi=1"
-                width="100%" height="100%" frameborder="0" donotallowfullscreen>></iframe>
-        </div>
-  </div>
-</div>
-
 <!-- GIFs Background -->
 <body style="background-size: 100% 100%; height: 100%; width: 100%; background-image: url('{{gif}}'); height: 100vh;">
 <!-- <img style="position: absolute; width: 100vw; height: 100vh; top: 0px; left: 0px; object-fit: cover; z-index: 0; background"> -->
@@ -130,6 +119,8 @@
         {% endif %}
       </ul>
     </div>
+    
+   
     <style>
 
         #list {
@@ -204,31 +195,14 @@
         </style>
   </div>
   </div>
-
-
-  <div class="mt-3 mx-2 row justify-content-end">
-    <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%;">
-      <div class="d-flex align-items-center justify-content-center display-1 fw-semibold">
-        <button type="button" onclick="pause()" id="pause-button">Pause</button>
-      </div>
+  
+  <nav class="navbar fixed-bottom" id="soundcloud">
+    <div class="container-fluid">
+      <iframe width="20%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/305665701&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-692461400" title="eevee" target="_blank" style="color: #cccccc; text-decoration: none;">eevee</a> · <a href="https://soundcloud.com/user-692461400/sets/lofi" title="Lofi" target="_blank" style="color: #cccccc; text-decoration: none;">Lofi</a></div>
     </div>
-  </div>
+  </nav>
 
-  <div class="mt-3 mx-2 row justify-content-end">
-    <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%;">
-      <div class="d-flex align-items-center justify-content-center display-1 fw-semibold">
-        <button type="button" onclick="play()" id="play-button">Play</button>
-      </div>
-    </div>
-  </div>
 
-  <div class="mt-3 mx-2 row justify-content-end">
-    <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%;">
-      <div class="d-flex align-items-center justify-content-center display-1 fw-semibold">
-        <button type="button" onclick="switchStations()" id="switchStations"> Switch Station 📻 </button>
-      </div>
-    </div>
-  </div>
 
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 <script type="text/javascript">
