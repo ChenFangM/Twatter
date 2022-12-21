@@ -176,6 +176,15 @@ def trivia():
     
     return render_template("trivia.html", question=triv_info["results"][0]["question"])
 
+@app.route("/updating", methods = ['GET', 'POST'])
+def testing():
+    print("OH MA GER")
+    if (request.method == "POST"):
+        print("TIS DONE" + request.form['task'])
+    else:
+        print("TIS NEW" + request.args['task'])
+    return "pigeon"
+
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
     app.debug = True
