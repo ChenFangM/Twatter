@@ -7,3 +7,15 @@ class currentUser:
         self.id = clone.id
         self.username = clone.username
         self.password = clone.password
+
+    def get_tasks(self):
+        data = execute('SELECT * FROM `stories` WHERE `stories`.usrID=%d' % self.id).fetchall()
+
+        if len(data) == 0:
+            return None
+
+        tasks = list()
+        for s in data:
+            print(s)
+
+        return true

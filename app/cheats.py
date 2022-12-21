@@ -42,6 +42,17 @@ def setup():
                 """
     )
 
+    execute(
+                """
+                INSERT INTO tasks (task, userid)
+                SELECT 'study for math test', '1'
+                WHERE NOT EXISTS
+                    (SELECT task, userid
+                    FROM tasks
+                    WHERE task = 'study for math test' AND userid = '1')
+                """
+    )
+
     # execute(
     #            """
     #            INSERT INTO
