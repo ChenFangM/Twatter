@@ -85,21 +85,30 @@
             </div>
 
             <div class="d-flex flex-column gap-2 py-2">
-              <div class="answer rounded-3" data-value="1">
-                  <h3>A1</h3>
-                </div>
+              <div style="display: none;" id="correct" data-value="1">
+                {{correctchoice}}
+              </div>
+              <button class="answer rounded-3" onclick="changeColor('a')" id="a" data-value="1">
+                  A1
+              </button>
 
-                <div class="answer rounded-3" data-value="2">
-                  <h3>A2</h3>
-                </div>
+                <button class="answer rounded-3" onclick="changeColor('b')" id="b" data-value="2">
+                  A2
+                </button>
 
-                <div class="answer rounded-3" data-value="3">
-                  <h3>A3</h3>
-                </div>
+                <button class="answer rounded-3" onclick="changeColor('c')" id="c" data-value="3">
+                  A3
+                </button>
 
-                <div class="answer rounded-3" data-value="3">
-                  <h3>A4</h3>
-                </div>
+                <button class="answer rounded-3" onclick="changeColor('d')" id="d" data-value="3">
+                  A4
+                </button>
+            </div>
+            
+            <div class="d-flex justify-content-center">
+              <form action = "/trivia">
+                <button type="submit" class="btn btn-light">Next Question</button>
+              </form>  
             </div>
 
             <script>
@@ -110,6 +119,62 @@
               }
               document.getElementById("q").innerHTML = decodeHtml("{{question}}")
             </script>
+
+<script>
+  function decodeHtml(s) {
+    var line = document.createElement("textarea");
+    line.innerHTML = s;
+    return line.value;
+  }
+  document.getElementById("a").innerHTML = decodeHtml("{{choicea}}")
+  document.getElementById("correct").innerHTML = decodeHtml("{{correctchoice}}")
+</script>
+
+<script>
+  function decodeHtml(s) {
+    var line = document.createElement("textarea");
+    line.innerHTML = s;
+    return line.value;
+  }
+  document.getElementById("b").innerHTML = decodeHtml("{{choiceb}}")
+</script>
+
+<script>
+  function decodeHtml(s) {
+    var line = document.createElement("textarea");
+    line.innerHTML = s;
+    return line.value;
+  }
+  document.getElementById("c").innerHTML = decodeHtml("{{choicec}}")
+</script>
+
+<script>
+  function decodeHtml(s) {
+    var line = document.createElement("textarea");
+    line.innerHTML = s;
+    return line.value;
+  }
+  document.getElementById("d").innerHTML = decodeHtml("{{choiced}}")
+</script>
+
+<script>
+  var x = document.getElementById("correct").innerHTML;   
+  console.log(x)         
+            
+  function changeColor(answer) {
+      
+      var choice = document.getElementById(answer).innerHTML;
+      console.log(choice)
+      if (choice === x){
+        document.getElementById(answer).style.background= "rgb(74 222 128)";
+      } else {
+        document.getElementById(answer).style.background= "rgb(251 113 133)";
+      }
+    
+  
+  }  
+          
+</script>
 
           </div>
     </div>

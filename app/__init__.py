@@ -17,6 +17,7 @@ app.secret_key = os.urandom(16)
 backgrounds = []
 trivToken = "YOURTOKENHERE"
 cheats.setup()
+triv_info = None
 
 username = "hello"
 password = "bye"
@@ -128,17 +129,55 @@ def dadjokes():
 
 @app.route("/trivia")
 def trivia():
-    global trivToken
-    category = 0
-    triv_info = requests.get(f"https://opentdb.com/api.php?amount=1&token={trivToken}&category={category}&type=multiple")
-    triv_info = json.loads(triv_info.text)
-    if (triv_info["response_code"] != 0):
-        trivToken = json.loads((requests.get("https://opentdb.com/api_token.php?command=request")).text)["token"]
-        return trivia()
+    global triv_info
+    if triv_info == None or len(triv_info)==0:
+        triv_info = requests.get(f"https://the-trivia-api.com/api/questions")
+        triv_info = triv_info.json()
+        #print(triv_info)
+        
+        current = triv_info[0]
+        triv_info.pop(0)
+        
+        allChoices=[]
+        allChoices.append(current["correctAnswer"])
+        
+        for i in current["incorrectAnswers"]:
+            allChoices.append(i)
+        
+        a=allChoices.pop(random.randint(0,len(allChoices)-1))
+        b=allChoices.pop(random.randint(0,len(allChoices)-1))
+        c=allChoices.pop(random.randint(0,len(allChoices)-1))
+        d=allChoices.pop(0)
+        correct = current["correctAnswer"]
     else:
-        return render_template("trivia.html", question=triv_info["results"][0]["question"])
+        current = triv_info[0]
+        triv_info.pop(0)
+        
+        allChoices=[]
+        allChoices.append(current["correctAnswer"])
+        
+        for i in current["incorrectAnswers"]:
+            allChoices.append(i)
+        
+        a=allChoices.pop(random.randint(0,len(allChoices)-1))
+        b=allChoices.pop(random.randint(0,len(allChoices)-1))
+        c=allChoices.pop(random.randint(0,len(allChoices)-1))
+        d=allChoices.pop(0)
+        correct = current["correctAnswer"]
+        
+        
+    
+    return render_template("trivia.html", question=current["question"],choicea=a,choiceb=b,choicec=c,choiced=d,correctchoice=correct)
+        
+        
+        
+    
+    
+    
+    return render_template("trivia.html", question=triv_info["results"][0]["question"])
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
     app.debug = True
     app.run()
+
