@@ -132,3 +132,14 @@ faizaH -- 2022-12-18 13:00
 Finished JS for adding, completing, and deleting tasks on todo list
 Started beforeunload events/bridging the gap btwn front and backend via saving
 ==============================================================
+
+ziggyJ and faizaH -- 2022-12-18 21:00
+--------------------------------------------------------------
+figured out where console is for js beforeunload event
+explored possibilities of z-index -> video doesn't play anymore
+===============================================================
+
+faizaH -- 2022-12-19 09:28
+--------------------------------------------------------------
+Linked enternal js file for index
+==============================================================
