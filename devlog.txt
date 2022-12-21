@@ -152,3 +152,11 @@ Disabled fullscreen
 Formatted YouTube video so that it stretched out and hid the More Videos section
 Created a pause button
 ==============================================================
+
+faizaH -- 2022-12-20 21:29
+--------------------------------------------------------------
+Removed DB from github
+Added redirecting for logged in users
+Added block content to index html allowing for PIZZA to placehold for tasks saved by usr in db
+Fixed JS issue by commenting out internal scripting for switching stations
+======================
