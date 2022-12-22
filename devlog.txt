@@ -147,7 +147,7 @@ Linked external js files for index
 fangC -- 2022-12-19 18:00
 --------------------------------------------------------------
 Fixed pomodoro glitch
-Started trivia tab: retrieve questions from api 
+Started trivia tab: retrieve questions from api
 (+decode format) and display them on the page
 ==============================================================
 
@@ -179,4 +179,10 @@ Added password protection (dot things) to signup
 Added placeholder logout button
 Added ajax adding and deleting of tasks frontend -> backend
 Changed PIZZA to actual tasks saved by usr
+==============================================================
+
+ziggyJ -- 2022-12-21 21:48
+--------------------------------------------------------------
+Got switchStations() to work using push() and shift()
+Added a Now Playing... title 
 ==============================================================

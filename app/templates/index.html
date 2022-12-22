@@ -13,7 +13,7 @@
     <title>Home</title>
 </head>
 
-{% block content %}
+<!-- {% block content %} -->
 
 <!-- YouTube Video Background -->
 <div style="position: fixed; inset: 0px; display: flex; align-items: center; justify-content: center; background: black; opacity:0.8;" class="yt-wrapper">
@@ -235,34 +235,13 @@
     </div>
   </div>
 
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-<script type="text/javascript">
-
-function pause(){
-  console.log("got clicked.");
-  var frame = document.getElementById("player");
-  frame.contentWindow.postMessage('{"event": "command", "func": "pauseVideo", "args": ""}', '*');
-}
-
-function switchStations() {
-  // console.log("got clicked.");
-  var frame = document.getElementById("player");
-  frame.src = "https://www.youtube.com/embed/L1zoItQw_e4?controls=0&autoplay=1&mute=0";
-}
-
-
-// $.getJSON("links.json", function(data) {
-//         console.log(data);
-//         // $('body').append(data.links[0].link);
-//     });
-//
-// $(document).ready(function(){
-//   $("switchStations").click(function(){
-//     $("#player".src).load();
-//   });
-// });
-
-</script> -->
+  <div class="mt-3 mx-2 row justify-content-end">
+    <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%;">
+      <div class="d-flex align-items-center justify-content-center display-1 fw-semibold">
+        <text id="video-title"> Now Playing </text>
+      </div>
+    </div>
+  </div>
 
 <!-- LINKAGES -->
 <script src="../static/js/tasks.js"></script>
@@ -270,6 +249,6 @@ function switchStations() {
 <script src="../static/js/timer.js"></script>
 
 </body>
-{% endblock content %}
+<!-- {% endblock content %} -->
 
 </html>
