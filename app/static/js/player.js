@@ -40,8 +40,9 @@ function switchStations() {
   // parsed videoTitles
   var title = document.getElementById("video-title");
   console.log(videoTitles);
-  title.innerHTML = "Now Playing " + videoTitles.shift()
-  videoTitles.push(title);
+  var actual_title = videoTitles.shift()
+  title.innerHTML = "Now Playing: " + actual_title
+  videoTitles.push(actual_title);
 }
 
 
