@@ -1,3 +1,5 @@
+// Struggled with JSON parsing... so here we are...
+
 const videoLinks =
 [
 
@@ -25,6 +27,8 @@ const videoTitles =
 
 function switchStations() {
   console.log("switchStations() clicked.");
+
+  // parsed videoLinks
   var frame = document.getElementById("player");
   // frame.src = "https://www.youtube.com/embed/L1zoItQw_e4?controls=0&autoplay=1&mute=0";
   // var jsonData = JSON.parse("../json/links.json"); // Parsing wouldn't work :(
@@ -33,6 +37,7 @@ function switchStations() {
   frame.src = videoLinks.shift();
   videoLinks.push(frame.src);
 
+  // parsed videoTitles
   var title = document.getElementById("video-title");
   console.log(videoTitles);
   title.innerHTML = "Now Playing " + videoTitles.shift()
