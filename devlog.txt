@@ -187,3 +187,10 @@ Got switchStations() to work using push() and shift()
 Added a Now Playing... title
 Fixed the button
 ==============================================================
+
+fangC -- 2022-12-22 05:43 
+--------------------------------------------------------------
+Frontend- Changed colors of all html pages to theme colors
+Resized and fixed player button/display to the bottom of the
+page
+==============================================================
