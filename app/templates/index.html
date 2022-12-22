@@ -16,8 +16,8 @@
 <!-- {% block content %} -->
 
 <!-- YouTube Video Background -->
-<div style="position: fixed; inset: 0px; display: flex; align-items: center; justify-content: center; background: black; opacity:0.8;" class="yt-wrapper">
-    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px; opacity:0.8;">
+<div style="position: fixed; inset: 0px; display: flex; align-items: center; justify-content: center; background: black; opacity:0.01;" class="yt-wrapper">
+    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px; opacity:0.01;">
         <div style="width: 100%; height: 145%;">
                 <iframe id="player" allow="autoplay;"
                 src="https://www.youtube.com/embed/qH3fETPsqXU?autoplay=1&mute=0&controls=0&playsinline=1&showinfo=0&rel=0&modestbranding=1&color=black&enable&amp;wmode=transparent?enablejsapi=1"
@@ -33,15 +33,15 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
-      <a class="navbar-brand btn btn-light btn-sm text-primary" style="opacity: 0.8;" href="/">coffeebuds</a>
+      <a class="navbar-brand btn btn-light btn-sm" style="opacity: 0.8; color: #383838;" href="/">coffeebuds</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav gap-2">
           <li class="nav-item">
-            <a class="nav-link btn btn-light btn-sm justify-content-center align-items-center" style="opacity: 0.8;" aria-current="page" onclick="toggle('timeToSleep');">
+            <a class="nav-link btn btn-light btn-sm" style="opacity: 0.8;" aria-current="page" onclick="toggle('timeToSleep');">
                 <img src="../static/assets/reshot-icon-minimal-timer-RLEU6FQHW5.svg" width="25px" height="25px" alt="">
             </a>
           </li>
@@ -84,41 +84,41 @@
   </script>
 
 
-<!-- POMODORO TIMER -->
+  <!-- POMODORO TIMER -->
 
   <!-- Display timer -->
   <div id='timeToSleep'>
   <div class="mt-3 mx-2 row justify-content-end">
-    <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%; height: 270px; width: 300px;">
+    <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:90%; height: 270px; width: 300px;">
       <div class="d-flex align-items-center justify-content-center display-1 fw-semibold">
-        <div id=displayTime>25:00</div>
+        <div id=displayTime style="color: #454545;">25:00</div>
       </div>
 
       <div class="d-flex justify-content-center gap-2">
-        <button type="button" class="btn btn-dark btn-lg" onclick="startTimer();">
+        <button type="button" class="btn btn-lg text-light" style="background: #bbd0ff" onclick="startTimer();">
           Start
         </button>
-        <button class="btn btn-dark btn-lg" onclick="pauseTimer();">
+        <button type="button" class="btn btn-lg text-light" style="background: #bbd0ff" onclick="pauseTimer();">
           Pause
         </button>
-        <button class="btn btn-dark btn-lg" onclick="resetTimer();">
+        <button type="button" class="btn btn-lg text-light" style="background: #bbd0ff;" onclick="resetTimer();">
           Reset
         </button>
       </div>
       <div class="d-flex justify-content-center gap-2">
-        <button class="btn btn-dark btn-lg" onclick="switchTimer();">
+        <button type="button" class="btn btn-lg text-light" style="background: #b8c0ff;" onclick="switchTimer();">
           Switch to Work/Break
         </button>
       </div>
     </div>
   </div>
-  </div>
+  </div> <!--End of Timer-->
 
   <!-- To-Do List -->
   <div id='listYourPets'>
   <div class="mt-3 mx-2 row justify-content-end">
-    <div id="container" class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%; height: auto; width: 300px; margin-bottom: 10px;">
-      <h1>To-Do List <i class="fa fa-plus"></i></h1>
+    <div id="container" class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:90%; height: auto; width: 300px; margin-bottom: 10px;">
+      <h1 class="rounded-3" style="background: #c8b6ff;">To-Do List <i class="fa fa-plus"></i></h1>
       <input type="text" placeholder="Add New Todo">
 
       <!--We can add the preexisting tasks here -->
@@ -208,40 +208,26 @@
 
         </style>
   </div>
-  </div>
+  </div> <!--End of ToDo-->
 
 
-  <div class="mt-3 mx-2 row justify-content-end">
-    <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%;">
-      <div class="d-flex align-items-center justify-content-center display-1 fw-semibold">
-        <button type="button" onclick="pause()" id="pause-button">Pause</button>
+  <!-- Player -->
+  <nav class="navbar fixed-bottom">
+    <div class="container-fluid">
+      <div class="rounded-3 bg-light" style="opacity: 90%; margin: 3px; padding: 10px;">
+        <text style="color: #383838;" id="video-title"> Now Playing: 【24/7 CHILL LOFI HIP HOP RADIO】beats to sleep/relax/study to </text>
+      </div>
+      <div>
+        <text style="color: #e7c6ff; margin: 3px; padding: 10px;">
+          Tap anywhere to play/pause!
+        </text>
+        <button type="button" id="switchStations" class="btn btn-light" style="opacity: 90%; margin: 3px;  padding: 10px; " onclick="switchStations();">
+          <text style="color: #383838;"> Next Station </text>
+        </button>
       </div>
     </div>
   </div>
-
-  <div class="mt-3 mx-2 row justify-content-end">
-    <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%;">
-      <div class="d-flex align-items-center justify-content-center display-1 fw-semibold">
-        <button type="button" onclick="play()" id="play-button">Play</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="mt-3 mx-2 row justify-content-end">
-    <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%;">
-      <div class="d-flex align-items-center justify-content-center display-1 fw-semibold">
-        <button type="button" onclick="switchStations()" id="switchStations"> Switch Station 📻 </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="mt-3 mx-2 row justify-content-end">
-    <div class="p-3 d-flex flex-column align-items-center gap-3 bg-light rounded-3 border" style="opacity:85%;">
-      <div class="d-flex align-items-center justify-content-center display-1 fw-semibold">
-        <text id="video-title"> Now Playing: 【24/7 CHILL LOFI HIP HOP RADIO】beats to sleep/relax/study to </text>
-      </div>
-    </div>
-  </div>
+  </nav>
 
 <!-- LINKAGES -->
 <script src="../static/js/tasks.js"></script>

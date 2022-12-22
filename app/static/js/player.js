@@ -46,14 +46,14 @@ function switchStations() {
 }
 
 
-function pause(){
-  console.log("pause() clicked.");
-  var frame = document.getElementById("player")
-  frame.contentWindow.postMessage('{"event":"command","func":"PauseVideo","args":""}', '*');
-}
+// function pause(){
+//   console.log("pause() clicked.");
+//   var frame = document.getElementById("player")
+//   frame.contentWindow.postMessage('{"event":"command","func":"PauseVideo","args":""}', '*');
+// }
 
-function play(){
-  console.log("play() clicked.");
-  var frame = document.getElementById("player")
-  frame.contentWindow.postMessage('{"event":"command","func":"PlayVideo","args":""}', '*');
-}
+// function play(){
+//   console.log("play() clicked.");
+//   var frame = document.getElementById("player")
+//   frame.contentWindow.postMessage('{"event":"command","func":"PlayVideo","args":""}', '*');
+// }
