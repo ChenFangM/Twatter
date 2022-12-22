@@ -184,5 +184,6 @@ Changed PIZZA to actual tasks saved by usr
 ziggyJ -- 2022-12-21 21:48
 --------------------------------------------------------------
 Got switchStations() to work using push() and shift()
-Added a Now Playing... title 
+Added a Now Playing... title
+Fixed the button
 ==============================================================
