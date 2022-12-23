@@ -37,10 +37,17 @@ DD revisions: Adding specificity
 - Added a short description of what the project is
 ==============================================================
 
+abidT -- 2022-12-07 09:20
+--------------------------------------------------------------
+Created basic file structure for the project.
+Began initial designs on the homepage.
+==============================================================
+
 abidT -- 2022-12-07 09:00
 --------------------------------------------------------------
-Created basic index page with gif background and nav bar
-Began pomodoro
+Created basic index page with gif background and nav bar.
+Began pomodoro.
+Fixed GIF not loading in the background.
 ==============================================================
 
 fangC -- 2022-12-08 00:46
@@ -66,6 +73,13 @@ Successfully made session cookies work
 Made placeholder HTML files
 ==============================================================
 
+
+abidT -- 2022-12-09 12:00
+--------------------------------------------------------------
+Finished the pomodoro timer widget with clock and buttons. Frontend only.
+Completed initial designs for the to-do list widget.
+==============================================================
+
 fangC -- 2022-12-10 14:00
 --------------------------------------------------------------
 Frontend for login pages
@@ -84,7 +98,35 @@ fangC -- 2022-12-10 09:00
 Fix redirects for login, signup, and profile
 ==============================================================
 
+abidT -- 2022-12-11 11:00
+--------------------------------------------------------------
+Finished basic for destress page. You can choose between Dad Jokes, Trivia, or Cat Pics.
+New SVGs and widgets are included in the destress for design purposes.
+==============================================================
+
+abidT -- 2022-12-12 18:00
+--------------------------------------------------------------
+Finished the look and design for the trivia page.
+==============================================================
+
+abidT -- 2022-12-12 11:00
+--------------------------------------------------------------
+Finished basic for destress page. You can choose between Dad Jokes, Trivia, or Cat Pics
+==============================================================
+
+abidT -- 2022-12-12 21:00
+--------------------------------------------------------------
+Fixed the background. The GIF used to take up boxes, but now it takes up the full screen.
+==============================================================
+
 ziggyJ and faizaH -- 2022-12-13 09:19
+--------------------------------------------------------------
+Set up html and css for todo list
+framework for js setup
+Put .gitignore in place
+==============================================================
+
+ziggyJ and faizaH -- 2022-12-13 09:
 --------------------------------------------------------------
 Set up html and css for todo list
 framework for js setup
@@ -114,6 +156,11 @@ faizaH -- 2022-12-15 09:28
 --------------------------------------------------------------
 Successfully Implemented JS and can now append things to list
 Changed todo list css and html
+==============================================================
+
+abidT -- 2022-12-15 22:00
+--------------------------------------------------------------
+Added new widget design to the to-do list
 ==============================================================
 
 fangC -- 2022-12-16 19:20
@@ -151,6 +198,11 @@ Started trivia tab: retrieve questions from api
 (+decode format) and display them on the page
 ==============================================================
 
+abidT -- 2022-12-19 09:24
+--------------------------------------------------------------
+Implemented Trivia API requests onto the app
+==============================================================
+
 ziggyJ -- 2022-12-20 10:49
 --------------------------------------------------------------
 Placed video in front of the GIF
@@ -186,6 +238,13 @@ ziggyJ -- 2022-12-21 21:48
 Got switchStations() to work using push() and shift()
 Added a Now Playing... title
 Fixed the button
+==============================================================
+
+ziggyJ -- 2022-12-21 22:00
+--------------------------------------------------------------
+Implemented buttons in trivia
+Implemented Trivia API
+Answers turn green or red based on correctness
 ==============================================================
 
 fangC -- 2022-12-22 05:43 
