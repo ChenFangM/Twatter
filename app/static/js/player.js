@@ -5,7 +5,6 @@ currentDirection = true //true for forwards, false for backwards
 
 const videoLinks =
 [
-
     "https://www.youtube.com/embed/L1zoItQw_e4?controls=0&autoplay=1&mute=0",
 
     "https://www.youtube.com/embed/uYJmRShQYH0?autoplay=1&mute=0&controls=0&playsinline=1&showinfo=0&rel=0&modestbranding=1&color=black&enable&amp;wmode=transparent",
@@ -47,44 +46,47 @@ function switchStations(forward) {
   // parsed videoTitles
   var title = document.getElementById("video-title");
   console.log(videoTitles);
-
-  if (forward){
-    frame.src = videoLinks.shift();
-    videoLinks.push(frame.src);
-    var actual_title = videoTitles.shift()
-    title.innerHTML = "Now Playing: " + actual_title
-    videoTitles.push(actual_title);
-    console.log("NEXT");
-  } else { 
-    frame.src = videoLinks.pop();
-    videoLinks.unshift(frame.src);
-    var actual_title = videoTitles.pop()
-    title.innerHTML = "Now Playing: " + actual_title
-    videoTitles.unshift(actual_title);
-    console.log("BACK");
-  }
+  var actual_title = videoTitles.shift()
+  title.innerHTML = "Now Playing: " + actual_title
+  videoTitles.push(actual_title);
 }
-
-window.addEventListener('keydown', function(event) {
-
-  if (event.key == "ArrowLeft"){
-
-    switchStations(false);
-    if (currentDirection == true) {
-      switchStations(false);
-      currentDirection = false;
-    }
-
-  } else if (event.key == "ArrowRight"){
-
-    switchStations(true);
-    if (currentDirection == false) {
-      switchStations(true);
-      currentDirection = true;
-    }
-
-  }
-});
+  // if (forward){
+  //   frame.src = videoLinks.shift();
+  //   videoLinks.push(frame.src);
+  //   var actual_title = videoTitles.shift()
+  //   title.innerHTML = "Now Playing: " + actual_title
+  //   videoTitles.push(actual_title);
+  //   console.log("NEXT");
+  // } else {
+  //   frame.src = videoLinks.pop();
+  //   videoLinks.unshift(frame.src);
+  //   var actual_title = videoTitles.pop()
+  //   title.innerHTML = "Now Playing: " + actual_title
+  //   videoTitles.unshift(actual_title);
+  //   console.log("BACK");
+  // }
+// }
+//
+// window.addEventListener('keydown', function(event) {
+//
+//   if (event.key == "ArrowLeft"){
+//
+//     switchStations(false);
+//     if (currentDirection == true) {
+//       switchStations(false);
+//       currentDirection = false;
+//     }
+//
+//   } else if (event.key == "ArrowRight"){
+//
+//     switchStations(true);
+//     if (currentDirection == false) {
+//       switchStations(true);
+//       currentDirection = true;
+//     }
+//
+//   }
+// }
 
 // document.body.addEventListener('keydown', function(event)
 //                                        {
@@ -103,6 +105,8 @@ window.addEventListener('keydown', function(event) {
 //                     str = 'Down';
 //                     break;
 //             }
+
+
 // function pause(){
 //   console.log("pause() clicked.");
 //   var frame = document.getElementById("player")
@@ -114,4 +118,3 @@ window.addEventListener('keydown', function(event) {
 //   var frame = document.getElementById("player")
 //   frame.contentWindow.postMessage('{"event":"command","func":"PlayVideo","args":""}', '*');
 // }
-
