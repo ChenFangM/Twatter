@@ -36,7 +36,7 @@ def backgroundSetup():
     with open('keys/key_giphy.txt', 'r') as f:
         key = f.read()
 
-    gif_info = requests.get(f"https://api.giphy.com/v1/gifs/search?api_key={key}&q=lofi&limit=25&offset=0&rating=g&lang=en")
+    gif_info = requests.get(f"https://api.giphy.com/v1/gifs/search?api_key={key}&q=aes@Averyota&limit=20&offset=0&rating=g&lang=en")
     gif_info = gif_info.json()
 
     #print(gif_info["data"])
