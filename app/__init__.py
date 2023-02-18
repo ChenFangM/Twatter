@@ -175,5 +175,5 @@ def testing():
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
     app.debug = True
-    app.run()
+    app.run(host="0.0.0.0")
 
